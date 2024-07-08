@@ -7,7 +7,7 @@ class SinglyLinkedListNode:
 
 
 class SinglyLinkedListManager:
-    def __init__(self, head: SinglyLinkedListNode):
+    def __init__(self, head: Optional[SinglyLinkedListNode] = None):
         self.head = head
 
     def __iter__(self):
@@ -30,12 +30,15 @@ class SinglyLinkedListManager:
         return self._get_node_to_ptr()
 
     def add(self, node: SinglyLinkedListNode):
+        if self.head is None:
+            self.head = node
+            return
         adder_ptr = self._get_last_node()
         adder_ptr.next_node = node
 
     def remove_node(self, node: SinglyLinkedListNode):
         if node == self.head:
-            self.head = self.head.next
+            self.head = self.head.next_node
             return
         
         ptr_node = self._get_node_to_ptr(node)
