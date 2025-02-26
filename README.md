@@ -1,0 +1,12 @@
+todo
+- refresh on concurrent (focus on io/cpu bound situations)
+- ddd
+- eda
+- cqrs
+- check python 3.9, 3.10 and 3.11 relevant updates
+- refresh on celery
+- read about airflow
+- refresh on redis for cache
+- refresh on postgresql scalability
+- read on gcp
+- brush on distributed systems
